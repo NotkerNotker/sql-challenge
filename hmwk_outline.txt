@@ -1,0 +1,41 @@
+Employees
+-
+emp_no integer FK >- Dept_Manager.emp_no
+birth_date varchar(50)
+first_name varchar(50)
+last_name varchar(50)
+gender varchar(20)
+hire_date varchar(50)
+
+Salaries
+-
+emp_no integer
+salary integer
+from_date varchar(50)
+to_date varchar(50)
+
+Titles
+-
+emp_no integer
+title varchar(50)
+from_date varchar(50)
+to_date varchar(50)
+
+Dept_Manager
+-
+dept_no varchar(20)
+emp_no integer
+from_date varchar(50)
+to_date varchar(50)
+
+Dept_Employees
+-
+emp_no integer
+dept_no varchar(20) FK >- Departments.dep_no
+from_date varchar(50)
+to_date varchar(50)
+
+Departments
+-
+dep_no varchar(20) FK -< Dept_Manager.dept_no
+dept_name varchar(50)
